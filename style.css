@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #2dc19f;
+    font-family: cursive, sans-serif;
+    color: whitesmoke;
+    text-shadow: 2px 2px 3px #282828;
+    padding: 0;
+    margin: 0;
+}
+
+/* Utility classes */
+
+.red { color: #d83933 }
+
+/* Title Style */
+
+h1 {
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+/* The grid and its children */
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.4em;
+    margin: 6em auto;
+    color: white;
+    width: 70%;
+    max-width: 780px;
+    background: #2e5663;
+}
+
+#grid div {
+    font-size: 3rem;
+    font-weight: bolder;
+    background: #2dc19f;
+    height: 8vh;
+
+    /* centralize */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game State txt */
+
+#game-state-holder {
+    font-size: 1.25rem;
+}
+
+/* Button */
+
+button {
+    font-family: cursive, sans-serif;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 35px;
+    padding: 0.5em 1em;
+    color: #282828;
+    background: whitesmoke;
+    cursor: pointer;
+    box-shadow: 0 0 20px #2e5663;
+}
+
+button:hover {
+    background: #b5b5b5;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+/* Animations */
+
+@keyframes colorfadeerr-red {
+    0%   { color: #2dc19f; text-shadow: none; }
+    100% { color: #d83933 } 
+}  
+
+@keyframes colorfadeerr-white {
+    0%   { color: #2dc19f; text-shadow: none; }
+    100% { color: #ffffff } 
+}
+
+@keyframes flashing-red {
+    0%   { color: #2dc19f; text-shadow: none; }
+    10%  { color: #d83933; text-shadow: 2px 2px 3px #282828; } 
+    20%  { color: #2dc19f; text-shadow: none; }
+    30%  { color: #d83933; text-shadow: 2px 2px 3px #282828; } 
+    40%  { color: #2dc19f; text-shadow: none; }
+    50%  { color: #d83933; text-shadow: 2px 2px 3px #282828; }
+    60%  { color: #2dc19f; text-shadow: none; }
+    70%  { color: #d83933; text-shadow: 2px 2px 3px #282828; }
+    80%  { color: #2dc19f; text-shadow: none; }
+    90%  { color: #d83933; text-shadow: 2px 2px 3px #282828; }
+    100% { color: #d83933; text-shadow: 2px 2px 3px #282828; } 
+}
+
+@keyframes flashing-white {
+    0%   { color: #2dc19f; text-shadow: none; }
+    10%  { color: #ffffff; text-shadow: 2px 2px 3px #282828; } 
+    20%  { color: #2dc19f; text-shadow: none; }
+    30%  { color: #ffffff; text-shadow: 2px 2px 3px #282828; } 
+    40%  { color: #2dc19f; text-shadow: none; }
+    50%  { color: #ffffff; text-shadow: 2px 2px 3px #282828; }
+    60%  { color: #2dc19f; text-shadow: none; }
+    70%  { color: #ffffff; text-shadow: 2px 2px 3px #282828; }
+    80%  { color: #2dc19f; text-shadow: none; }
+    90%  { color: #ffffff; text-shadow: 2px 2px 3px #282828; }
+    100% { color: #ffffff; text-shadow: 2px 2px 3px #282828; } 
+}
