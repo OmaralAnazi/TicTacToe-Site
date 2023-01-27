@@ -72,7 +72,7 @@ function isGameFinish(character) {
         endMessageHtml = character+" wins"
     }
     
-    if(isDraw()) {
+    if(!gameEnd && isDraw()) {
         gameEnd = true
         endMessageHtml = "Tie!"
     }
